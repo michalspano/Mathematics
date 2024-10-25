@@ -1,0 +1,40 @@
+\section{Rings, Fields}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+The following demonstrates a trivial discussion of \textbf{rings, fields} on
+the number sets \(\N, \Z, \Q\).
+
+\subsection{Rings, fields on $\N$}
+
+We try define a commutative group \(\la \N, \op \ra\). However, this is not
+possible, because $\op$ does not have an additive inverse defined on $\N$.
+Hence, \(\langle \N, \op \rangle\) fails to be a (commutative) group, so it
+cannot be a ring neither a field.
+
+\subsection{Rings, fields on $\Z$}
+
+Similarly, we try define a commutative group \(\la \Z, \op \ra\). We observe
+that this is possible with an identity $0$. Furthermore, $\oo$ is commutative,
+associative and has an identity $1$. According to the \verb|DEF|, \(\la \Z,
+\op, \oo \ra\) is a commutative ring. However, the operation $\oo$ does not 
+have multiplicative inverses on \(\Z \backslash 0\), so it cannot be a field.
+
+\subsection{Rings, fields on $\Q$}
+
+Clearly, \(\la \Q, \op, \oo \ra\) is a commutative ring. Also, $\oo$ contains
+multiplicative inverses on \(\Q \backslash 0\), so \(\la \Q, \op, \oo \ra\)
+must be a field based on \verb|DEF|.
+
+\subsection{Exercises}
+
+\exercise Let \(\la F, \op, \oo \ra\) be a field. Prove that the
+following holds about the field
+
+\[
+ \forall a,b,c,d \in F: \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bc}, b, c, d
+ \neq 0
+\] % TODO: solve this exercise.
+

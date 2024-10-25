@@ -1,4 +1,5 @@
 \documentclass[10pt,a4paper]{article}
+% TODO: this file is largely WIP. Update it to comply with the standards.
 
 % Packages
 \usepackage[utf8]{inputenc}
@@ -10,58 +11,26 @@
 \usepackage{pgfplots}
 \usepackage{lineno}
 
-\title{\textbf{Mathematical proofs}}
+\title{\textbf{The Mathematician's Logbook \\ \Large A Personal Chronicle}}
 \author{Michal Spano}
-\date{March 2022 - \textit{present}}
+\date{March 2022---\textit{present}}
 
 \begin{document}
 
 \maketitle
+\tableofcontents
 
-\section*{The inner angle of an \textit{n-sided} convex regular polygon}
-
-% Introduction
-Suppose an $n-sided$ convex regular polygon. Its 4 consecutive vertices are shown in the figures, $N_1, N_2, N_3, ..., N_i$ respectively.
-Thus $\Delta_{N_1,N_2,S} \cong \Delta_{N_2,N_3,S}$, i.e. such $n-sided$ polygon consists of $n$ congruent isosceles triangles.
-That is, $|\measuredangle N_2 N_1 S| = |\measuredangle N_1 N_2 S| \Rightarrow |\measuredangle N_1 N_2 S| = |\measuredangle S N_2 N_3|$,
-denoted as $\beta, \beta'$ respectively.
-
-% Section I
-An angle $\alpha = |\measuredangle N_1 S N_2| = \cfrac{360}{n}$, since such an angle multiplied by $n$ makes for a perfect circle of $360\degree$. 
-Likewise $\alpha = 180\degree - 2 \beta$.
-
-% Section II
-Let $\phi$ be an inner angle of the polygon, such that $\phi = 2 \beta$ (shown in the figure at the vertex $N_2$).
-
-% Steps of the proof
-Given $\alpha$, let us re-arrange the expression in terms of $\beta$:
-
-$$\alpha = 180 - 2 \beta \iff \beta = \cfrac{-\alpha + 180}{2}$$
-
-Knowing the properties of $\alpha$, we substitute $\alpha$ for $\alpha = {360}/n$ and obtain:
-
-$$\beta = \cfrac{-\cfrac{360}{n} + 180}{2} \iff \beta = \cfrac{180n - 360}{2n}$$
-
-Knowing the definition of the inner angle of the polygon, namely $\phi = 2 \beta$, we have that:
-$$\phi = 2 \beta = 2 \ast \Bigg( \cfrac{180n - 360}{2n} \Bigg) = \cfrac{180n - 360}{n}$$
-
-The obtained expression can be further simplified to the following:
-
-% End of the proof
-$$\phi = \cfrac{(n-2) \pi}{n}$$
-
-$\therefore$ the inner angle of an \textit{n-sided} convex regular polygon is ${(n-2) \ast \pi}n^{-1}$. $\blacksquare$
-
-% Include a picture of a unit circle
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=3.cm]{polygon_export.png}
-    \caption{\textit{n-sided} polygon with its 4 vertices in a plane}
-\end{figure}
+% Setup a counter for the exercises
+\newcounter{exercise}
+\newcommand{\exercise}{\paragraph{Exercise \theexercise.}\stepcounter{exercise}}
 
 \newpage
 
-\section*{The number of diagonals of an $n-sided$ convex regular polygon}
+\section{Planar Geometry}
+
+\input{inner-angle-n-polynom}
+
+\subsection{The number of diagonals of an $n-sided$ convex regular polygon}
 
 Suppose a geometrical locus of $n$ points on the plane, 
 % Steps of the proof
@@ -77,7 +46,7 @@ abscissas and the number of sides}:
 % End of the proof
 $$N_D = N_s - n$$
 
-\section*{The similarity coefficient}
+\subsection{The similarity coefficient}
 
 % Start of the proof
 Suppose a scalene triangle $\Delta_{ABC}$. We assume that there exists a triangle $\Delta_{A'B'C'}$,
@@ -138,7 +107,21 @@ based on the principles of \textbf{congruence}.
 
 % End of the proof
 
-\section*{Function bounded above and/or below}
+\section{Functions}
+
+TODO: write generally about functions.
+
+% Some fun exercises:
+Let $M$, $N$ be sets. We define a function \(f: M \to N\). Let $F$ define the
+sets of all such functions. What's the cardinality of $F$ if
+
+\begin{itemize}
+  \item $f$ is injective,
+  \item $f$ is surjective,
+  \item $f$ is bijective.
+\end{itemize}
+
+\subsection{Function bounded above and/or below}
 
 % Start of the proof - bounded above and/or below function
 
@@ -172,7 +155,7 @@ is bounded, such that $[-1;1]$ is its range of values. \\
 
 \newpage
 
-\section*{The standard rules of logarithms}
+\subsection{The standard rules of logarithms}
 
 % Start of the proof - standard rules of logarithms
 
@@ -229,7 +212,7 @@ The following rules of logarithms hold for $x,y,a,s$, such that:
 \newpage
 
 % Start of the proof - sum of n terms of an arithmetic sequence
-\section*{The sum of $n$ terms of an arithmetic sequence}
+\subsection{The sum of $n$ terms of an arithmetic sequence}
 
 Suppose an arithmetic sequence (also called a progression or a series) $\{a_{n}\}_{n=1}^{\infty}$. That is, a sequence of $n$ terms, where:
 $$\exists! d \in \mathbb{R} - \{0\}, \forall i,j \in \mathbb{N}: d = a_{i} - a_{j} \land i - j = 1$$ 
@@ -252,7 +235,7 @@ Lastly, we have that: $$S_{n} = \cfrac{n \times (a_{n} + a_{1})}{2}$$
 
 % Start of the proof - sum of n terms of an arithmetic sequence by mathematical induction
 
-\section*{The sum of $n$ terms of an arithmetic sequence (proof)}
+\subsection{The sum of $n$ terms of an arithmetic sequence (proof)}
 
 Suppose you are given a simple arithmetic sequence, where the difference between every 2 consecutive terms 
 $d$ is 1. We assume the following (using the notation from the previous section): 
@@ -280,7 +263,18 @@ Finally, we have that $S(n)$ holds for all $n \in \mathbb{N}$, and thus \textbf{
 
 % End of the proof
 
-\section*{Quantifiers in mathematical logic (1)} 
+\section{Recursion, Induction}
+
+\exercise Show that \(\binom{2n}{n} < 2^{2n-2}\) whenever \(n \geq 5\).
+
+\section{Relations}
+\input{relations}
+
+\section{Logic}
+
+\subsection{Quantifiers}
+
+\paragraph{Example 1}
 
 \textbf{Task 1.} Show that $\neg \forall x [P(x)] \iff \exists [\neg P(x)]$.
 
@@ -297,40 +291,42 @@ it's left to the reader to prove it.
 
 % End of the first proof of the quantifiers
 
-\section*{Quantifiers in mathematical logic (2)}
+\paragraph{Example 1}
 
 \textbf{Task 2.} Negate the following expression: $\forall x \exists y [P(x, y) \land Q(x)]$.
 
 \textbf{Solution}: the resulting expression is broken down into 4 consecutive steps. A brief description is
 adduced for each step. Observe the steps one by one until the resulting expression:
 
-\begin{linenomath*}
-    \begin{equation}
-        \neg \big( \forall x \exists y [P(x, y) \land Q(x)] \big)
-        \text{ - the initial expression is negated}
-    \end{equation} 
-    \begin{equation}
-        \exists x \neg \big( \exists y [P(x, y) \land Q(x)] \big)
-        \text{ - the outer quantifier is negated}
-    \end{equation}
-    \begin{equation}
-        \exists x \forall y \neg \big( [P(x, y) \land Q(x)] \big)
-        \text{ - the inner quantifier is negated}
-    \end{equation}
-    \begin{equation}
-        \exists x \forall y [\neg P(x, y) \lor \neg Q(x)]
-        \text{ - De Morgan's law} ^{\ast} \text{ is applied}
-    \end{equation}
-    \begin{equation}
-        \text{The resulting expression. } \blacksquare
-    \end{equation}
-    
-\end{linenomath*}
+\begin{align}
+  \neg \big( \forall x \exists y [P(x, y) \land Q(x)] \big)
+  &\text{ (the initial expression is negated)}               \\
+  \exists x \neg \big( \exists y [P(x, y) \land Q(x)] \big)
+  &\text{ - the outer quantifier is negated}                 \\
+  \exists x \forall y \neg \big( [P(x, y) \land Q(x)] \big)
+  &\text{ - the inner quantifier is negated}                 \\
+  \exists x \forall y [\neg P(x, y) \lor \neg Q(x)]
+  &\text{ (De Morgan's law\footnote[1]{} is applied}
+  \blacksquare
+\end{align}
 
-$^{\ast}$In this case, it represents the negation of the conjunction, 
-namely: $\neg \big( A(x) \land B(x) \big) \equiv \neg A(x) \lor \neg B(x)$ 
-for some predicates $A$ and $B$ given $x$.
+% FIXME: footnotes don't appear in equations, etc.
+$^{1}$In this case, it represents the negation of the conjunction, namely:
+$\neg \big( A(x) \land B(x) \big) \equiv \neg A(x) \lor \neg B(x)$ for some
+predicates $A$ and $B$ given $x$. 
+
+\newpage
+
+\section{Algorithms, Algorithmic Analysis, Complexity}
+
+\input{algorithms-complexity}
+
+\section{Algebraic Structures, Abstract Algebra}
+
+\input{groups}
+\input{rings-fields}
 
 \end{document}
 
 % End of the second proof of the quantifiers
+

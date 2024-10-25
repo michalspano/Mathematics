@@ -1,0 +1,34 @@
+\section{Groups}
+
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\op}{\oplus}
+\newcommand{\oo}{\otimes}
+
+\newcommand{\pset}[1]{\mathcal{P}(#1)}
+
+The following section discusses \textbf{groups} as a central concept in algebra.
+Furthermore, it illustrates the concept with examples and exercises.
+
+\exercise Let $S$ be a non-empty set. Suppose a bijective function \(f: S
+\longrightarrow S\). Then, suppose a set of all such bijective functions
+labeled $B$. Decide if \(\la B, \circ \ra\) is a group.
+
+\exercise Let $A$ be a non-empty set. Decide if \(\la \pset{A}, \Delta \ra\) is
+a group. The operator $\Delta$ is defined by
+
+\[
+  A \Delta B = A \backslash B \cup B \backslash A
+\] % TODO: solve this exercise.
+
+\exercise Let \(\la G, \star \ra\), \(\la H, \ostar \ra\) be groups. We define
+the Cartesian product of the two groups \(\la G, \star \ra \times \la H, \ostar
+\ra\) with an operation $\ast$ as the following
+
+\[
+  \la G \times H, \ast \ra = (g_1, h_1) \ast (g_2, h_2) = (g_1 \star g_2, h_1
+  \ostar h_2)
+\]
+
+% \exercise Suppose the set \(\Z_{p}\) where $p$ is a prime number. Show that
+% every element from the set has a multiplicative inverse.

@@ -1,0 +1,52 @@
+\newcommand{\rel}{\mathcal{R}}
+
+A relation $\rel$ on $A$, that is, \(\rel \subset A \times A\), is a set of
+ordered pairs of elements of $A$. Written in conventional set notation, the
+relation $\rel$ is
+
+\[
+  \{(a, b) \in \rel: a \text{ related to } b\}
+\]
+
+The phrase ``$a$ is related to $b$'' can be interpreted in many ways, depending
+on the problem at hand. Consider the following trivial example.
+
+Example: Let $\rel$ be a relation on \(N = \{\text{``Ave'', ``Bob'',
+``Caesar''}\}\). $\rel$ is defined by a pair of elements (in this case, names)
+if the number of letters in the first name is greater than the number of
+letters in the second name. Firstly, we examine \(N \times N\)
+
+\begin{align*}
+  N \times N = \{&(\text{Ave}, \text{Ave}), (\text{Ave}, \text{Bob}), (\text{Ave}, \text{Caesar}),\\
+                 &(\text{Bob}, \text{Ave}), (\text{Bob}, \text{Bob}),
+                 (\text{Bob}, \text{Caesar}),\\
+                 &(\text{Caesar}, \text{Ave}), (\text{Caesar}, \text{Bob}),
+                  (\text{Caesar}, \text{Caesar})\}
+\end{align*}
+
+However, given all possible pairs of names, we can now select the pairs that
+satisfy the relation $\rel$ and receive
+
+\[
+  \rel = \{(\text{Caesar}, \text{Ave}), (\text{Caesar}, \text{Bob})\}
+\]
+
+\subsection{Equivalence Relations}
+
+TODO: define what an equivalence relation means.
+
+\subsection{Equivalence Class, Partition}
+
+TODO: define what an equivalence class is.
+
+A \textbf{partition} of a set $A$ is a union of all its equivalence classes. Keep
+in mind that the equivalence classes are non-overlapping (i.e. disjoint) and
+non-empty. That is, a partition of a set $A$ must follow the following rules:
+
+\begin{enumerate}
+  \item \(\forall i: A_i \neq \emptyset\)
+  \item \(\forall i, j: A_i \cap A_j = \emptyset, i \neq j\) \label{prop:disjoint}
+  \item \(\bigcup_{i} A_i = A\)
+\end{enumerate}
+
+\exercise Show that (\ref{prop:disjoint}) holds.

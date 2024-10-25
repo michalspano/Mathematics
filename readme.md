@@ -1,14 +1,17 @@
-# Study materials for Mathematics and Programming
+# Study Resources by @michalspano
 
-This repositery contains a collection of study materials for __Mathematics__, __Programming__ and much more! Written by [@michalspano](https://github.com/michalspano).
+This repositery contains a collection of **study resources** that I have
+written or compiled over the years. The resources are mainly focused on the
+following topics:
 
-## Contents 
+- **Mathematics** (Algebra, Calculus, Linear Algebra, Probability, Statistics)
+- **Computer Science** (Algorithms, Data Structures, Programming Languages)
+- **Programming** (Python, Haskell, Java)
+- **etc.**
 
-1. [Mathematics](https://github.com/michalspano/study-materials/tree/main/study-materials/Mathematics) 
-2. [Programming](https://github.com/michalspano/study-materials/tree/main/study-materials/Programming) 
+Feel free to use these resources for your own study purposes. If you find any
+errors or have suggestions for improvement, please let me know by creating an
+issue or pull request. Read the [**MIT License**][license] for more
+information.
 
-<br>
-<!-- Stylised photo with html syntax -->
-<p style="text-align:center;"><img src="https://miro.medium.com/max/1400/1*7AKb9rynbkiMVV6pReqW2g.png" style="width: 82%; height: auto;"></p><br>
-
-<p style="text-align: center;">Licensed under <a href="https://github.com/michalspano/study-materials/blob/main/LICENSE"><b>MIT License</b></a></p>
+[license]: https://github.com/michalspano/study-resources/blob/main/LICENSE
